@@ -1,0 +1,15 @@
+[Unit]
+Description=FAUST CTF mars-express service
+
+[Service]
+ExecStart=-/srv/mars-express/mars-express
+Environment=TERM=ansi77 COLUMNS=40 ROWS=20
+WorkingDirectory=/srv/mars-express
+StandardInput=socket
+StandardOutput=socket
+User=mars-express
+LimitNPROC=100
+LimitCPU=30
+
+Restart=on-failure
+PrivateTmp=true

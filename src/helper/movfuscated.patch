@@ -1,0 +1,23 @@
+--- a/foo.s	2020-03-05 16:12:08.880606195 -0800
++++ b/foo.s	2020-03-05 16:12:21.500344151 -0800
+@@ -135607,7 +135607,7 @@
+ .align 16
+ .globl sel_on, on, toggle_execution
+ sel_on: .long discard, on
+-on: .long 0
++on: .long 1
+ toggle_execution: .long 1
+ 
+ .align 16
+@@ -135662,11 +135662,6 @@
+ fault: .long no_fault, 0
+ no_fault: .long 0
+ 
+-.globl sa_dispatch
+-sa_dispatch: .long dispatch
+-             .fill 0x20, 4, 0
+-             .long 1073741824
+-             .long 0
+ 
+ 
+ .bss

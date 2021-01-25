@@ -1,0 +1,11 @@
+[Unit]
+Description=FAUST CTF mars-express service
+Requires=srv-mars\x2dexpress-data.mount
+After=srv-mars\x2dexpress-data.mount
+
+[Socket]
+ListenStream=8888
+Accept=true
+
+[Install]
+WantedBy=sockets.target

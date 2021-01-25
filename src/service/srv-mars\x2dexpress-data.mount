@@ -1,0 +1,8 @@
+[Unit]
+Description=FAUST CTF mars-express data mount
+
+[Mount]
+What=/srv/mars-express/data
+Where=/srv/mars-express/data
+Type=fuse.bindfs
+Options=force-user=root,perms=u=rwD:g=r:dg=rwx:o=D
